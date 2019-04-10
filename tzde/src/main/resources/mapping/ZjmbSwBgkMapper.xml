@@ -1375,21 +1375,27 @@
     VC_SJCSBZ, VC_JKID, VC_SCSBYY, VC_BGKCODE, DT_QXXGSJ, VC_UP_SP_FLAG
   </sql>
 
-	<select id="selectByVcUpSpFLAG" resultMap="BaseResultMap">
-      select VC_XM,
-             VC_SFZHM,
-             (select name from code_info c where c.code = VC_HKJDDM) || '' ||
-             VC_HKXXDZ as VC_HKXXDZ,
-             VC_JSLXDH,
-             DT_SWRQ,
-             VC_AZJSWJB || '' || VC_BZJSWJB || '' || VC_CZJSWJB || '' ||
-             VC_DZJSWJB as VC_AZJSWJB
-		from ZJMB_SW_BGK s
-		where s.VC_UP_SP_FLAG = #{vcUpSpFlag}
-		<![CDATA[
-		AND ROWNUM <= 1000 ORDER BY s.dt_swrq
-		]]>
-	</select>
+    <!-- 获取死亡数据(共享接口使用) -->
+    <select id="getSwData" resultType="map">
+        select t.VC_XM as xm,
+               t.VC_SFZHM as zjhm,
+               (select name from code_info c where c.code = t.VC_HKJDDM) || '' || t.VC_HKXXDZ as hjdz,
+               t.VC_JSLXDH as lxrdh,
+               t.DT_SWRQ as swrq,
+               t.VC_AZJSWJB || '' || t.VC_BZJSWJB || '' || t.VC_CZJSWJB || '' || t.VC_DZJSWJB as zhswyy
+          from ZJMB_SW_BGK t
+          where 1=1
+          <if test='vcShbz != null and vcShbz != ""'>
+            and t.VC_SHBZ = #{vcShbz}
+          </if>
+          <if test='vcUpSpFlag != null and vcUpSpFlag == 0'>
+            and (t.VC_UP_SP_FLAG = 0 or t.VC_UP_SP_FLAG is null)
+          </if>
+          <if test='vcUpSpFlag != null and vcUpSpFlag != 0'>
+            and t.VC_UP_SP_FLAG = #{vcUpSpFlag}
+          </if>
+          and ROWNUM &lt;= 1000 ORDER BY t.dt_swrq
+    </select>
   
   
 </mapper>

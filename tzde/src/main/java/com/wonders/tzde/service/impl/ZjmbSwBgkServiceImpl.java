@@ -9,6 +9,7 @@ import com.wonders.tzde.service.ZjmbSwBgkService;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Service("zjmbSwBgkService")
 public class ZjmbSwBgkServiceImpl implements ZjmbSwBgkService {
@@ -17,8 +18,7 @@ public class ZjmbSwBgkServiceImpl implements ZjmbSwBgkService {
 	private ZjmbSwBgkMapper zjmbSwBgkMapper;
 	
 	@Override
-	public List<ZjmbSwBgk> selectByVcUpSpFLAG(short vcUpSpFlag){
-		return zjmbSwBgkMapper.selectByVcUpSpFLAG(vcUpSpFlag);
+	public List<Map<String, Object>> getSwData(ZjmbSwBgk params) {
+		return zjmbSwBgkMapper.getSwData(params);
 	}
-
 }

@@ -3,8 +3,15 @@ package com.wonders.tzde.service;
 import com.wonders.tzde.model.ZjmbSwBgk;
 
 import java.util.List;
+import java.util.Map;
 
 
 public interface ZjmbSwBgkService {
-	List<ZjmbSwBgk> selectByVcUpSpFLAG(short vcUpSpFlag);
+
+	/**
+	 * 获取死亡数据(共享接口使用)
+	 * @param params
+	 * @return
+	 */
+	List<Map<String, Object>> getSwData(ZjmbSwBgk params);
 }

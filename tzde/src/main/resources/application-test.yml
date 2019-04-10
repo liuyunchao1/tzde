@@ -37,5 +37,3 @@ mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
   type-aliases-package: com.wonders.tzde.model
 
-# 死亡接口定时上传时间，单位毫秒
-mbScheduleTime: 300000
