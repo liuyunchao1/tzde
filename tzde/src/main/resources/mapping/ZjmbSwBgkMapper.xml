@@ -1,0 +1,1395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wonders.tzde.mapper.ZjmbSwBgkMapper">
+  <resultMap id="BaseResultMap" type="com.wonders.tzde.model.ZjmbSwBgk">
+    <result column="VC_BGKID" jdbcType="VARCHAR" property="vcBgkid" />
+    <result column="VC_CCID" jdbcType="VARCHAR" property="vcCcid" />
+    <result column="VC_CKBZ" jdbcType="VARCHAR" property="vcCkbz" />
+    <result column="VC_XM" jdbcType="VARCHAR" property="vcXm" />
+    <result column="VC_JKDW" jdbcType="VARCHAR" property="vcJkdw" />
+    <result column="NB_JKYYBM" jdbcType="VARCHAR" property="nbJkyybm" />
+    <result column="VC_JKYS" jdbcType="VARCHAR" property="vcJkys" />
+    <result column="DT_JKSJ" jdbcType="TIMESTAMP" property="dtJksj" />
+    <result column="VC_XB" jdbcType="VARCHAR" property="vcXb" />
+    <result column="VC_MZ" jdbcType="VARCHAR" property="vcMz" />
+    <result column="VC_ZY" jdbcType="VARCHAR" property="vcZy" />
+    <result column="VC_HJDZLX" jdbcType="VARCHAR" property="vcHjdzlx" />
+    <result column="VC_HJDZ" jdbcType="VARCHAR" property="vcHjdz" />
+    <result column="VC_HJDZBM" jdbcType="VARCHAR" property="vcHjdzbm" />
+    <result column="VC_HYZK" jdbcType="VARCHAR" property="vcHyzk" />
+    <result column="VC_WHCD" jdbcType="VARCHAR" property="vcWhcd" />
+    <result column="DT_SWRQ" jdbcType="TIMESTAMP" property="dtSwrq" />
+    <result column="VC_SZNL" jdbcType="VARCHAR" property="vcSznl" />
+    <result column="VC_SFZHM" jdbcType="VARCHAR" property="vcSfzhm" />
+    <result column="VC_RQFL" jdbcType="VARCHAR" property="vcRqfl" />
+    <result column="VC_SWDD" jdbcType="VARCHAR" property="vcSwdd" />
+    <result column="VC_SQCZDZLX" jdbcType="VARCHAR" property="vcSqczdzlx" />
+    <result column="VC_SQXXDZ" jdbcType="VARCHAR" property="vcSqxxdz" />
+    <result column="VC_SQZGZDDW" jdbcType="VARCHAR" property="vcSqzgzddw" />
+    <result column="VC_ICDBM" jdbcType="VARCHAR" property="vcIcdbm" />
+    <result column="VC_ZDYJ" jdbcType="VARCHAR" property="vcZdyj" />
+    <result column="VC_GBSY" jdbcType="VARCHAR" property="vcGbsy" />
+    <result column="NB_GBSYBM" jdbcType="VARCHAR" property="nbGbsybm" />
+    <result column="VC_QTJBZD" jdbcType="VARCHAR" property="vcQtjbzd" />
+    <result column="NB_QTJBZDICD" jdbcType="DECIMAL" property="nbQtjbzdicd" />
+    <result column="VC_JSXM" jdbcType="VARCHAR" property="vcJsxm" />
+    <result column="VC_JSLXDH" jdbcType="VARCHAR" property="vcJslxdh" />
+    <result column="VC_JSDZ" jdbcType="VARCHAR" property="vcJsdz" />
+    <result column="VC_BGKLB" jdbcType="VARCHAR" property="vcBgklb" />
+    <result column="VC_ZYH" jdbcType="VARCHAR" property="vcZyh" />
+    <result column="VC_SCBZ" jdbcType="VARCHAR" property="vcScbz" />
+    <result column="VC_GLDWDM" jdbcType="VARCHAR" property="vcGldwdm" />
+    <result column="VC_CJDWDM" jdbcType="VARCHAR" property="vcCjdwdm" />
+    <result column="DT_CJSJ" jdbcType="TIMESTAMP" property="dtCjsj" />
+    <result column="VC_CJYH" jdbcType="VARCHAR" property="vcCjyh" />
+    <result column="DT_XGSJ" jdbcType="TIMESTAMP" property="dtXgsj" />
+    <result column="VC_XGYH" jdbcType="VARCHAR" property="vcXgyh" />
+    <result column="VC_AZJSWJB" jdbcType="VARCHAR" property="vcAzjswjb" />
+    <result column="NB_AZJSWJBICD" jdbcType="VARCHAR" property="nbAzjswjbicd" />
+    <result column="VC_AFBDSWSJJG" jdbcType="VARCHAR" property="vcAfbdswsjjg" />
+    <result column="VC_AFBDSWSJDW" jdbcType="VARCHAR" property="vcAfbdswsjdw" />
+    <result column="VC_BZJSWJB" jdbcType="VARCHAR" property="vcBzjswjb" />
+    <result column="NB_BZJSWJBIDC" jdbcType="VARCHAR" property="nbBzjswjbidc" />
+    <result column="VC_BFBDSWSJJG" jdbcType="VARCHAR" property="vcBfbdswsjjg" />
+    <result column="VC_BFBDSWSJDW" jdbcType="VARCHAR" property="vcBfbdswsjdw" />
+    <result column="VC_CZJSWJB" jdbcType="VARCHAR" property="vcCzjswjb" />
+    <result column="NB_CZJSWJBICD" jdbcType="VARCHAR" property="nbCzjswjbicd" />
+    <result column="VC_CFBDSWSJJG" jdbcType="VARCHAR" property="vcCfbdswsjjg" />
+    <result column="VC_CFBDSWSJDW" jdbcType="VARCHAR" property="vcCfbdswsjdw" />
+    <result column="VC_DZJSWJB" jdbcType="VARCHAR" property="vcDzjswjb" />
+    <result column="NB_DAJSWJBICD" jdbcType="VARCHAR" property="nbDajswjbicd" />
+    <result column="VC_DFBDSWSJJG" jdbcType="VARCHAR" property="vcDfbdswsjjg" />
+    <result column="VC_DFBDSWSJDW" jdbcType="VARCHAR" property="vcDfbdswsjdw" />
+    <result column="VC_SZSQBLJZZTZ" jdbcType="VARCHAR" property="vcSzsqbljzztz" />
+    <result column="VC_BDCZXM" jdbcType="VARCHAR" property="vcBdczxm" />
+    <result column="VC_YSZGX" jdbcType="VARCHAR" property="vcYszgx" />
+    <result column="VC_LXDZHGZDW" jdbcType="VARCHAR" property="vcLxdzhgzdw" />
+    <result column="VC_BDCZDH" jdbcType="VARCHAR" property="vcBdczdh" />
+    <result column="VC_SYTD" jdbcType="VARCHAR" property="vcSytd" />
+    <result column="VC_BDCZQM" jdbcType="VARCHAR" property="vcBdczqm" />
+    <result column="DT_DCRQ" jdbcType="TIMESTAMP" property="dtDcrq" />
+    <result column="DT_SCSJ" jdbcType="TIMESTAMP" property="dtScsj" />
+    <result column="DT_LRSJ" jdbcType="TIMESTAMP" property="dtLrsj" />
+    <result column="VC_LRRID" jdbcType="VARCHAR" property="vcLrrid" />
+    <result column="VC_SHBZ" jdbcType="VARCHAR" property="vcShbz" />
+    <result column="DT_SHSJ" jdbcType="TIMESTAMP" property="dtShsj" />
+    <result column="VC_KPZT" jdbcType="VARCHAR" property="vcKpzt" />
+    <result column="VC_KPLY" jdbcType="VARCHAR" property="vcKply" />
+    <result column="VC_HKSDM" jdbcType="VARCHAR" property="vcHksdm" />
+    <result column="VC_HKQXDM" jdbcType="VARCHAR" property="vcHkqxdm" />
+    <result column="VC_HKJDDM" jdbcType="VARCHAR" property="vcHkjddm" />
+    <result column="VC_CSSDM" jdbcType="VARCHAR" property="vcCssdm" />
+    <result column="VC_CSQXDM" jdbcType="VARCHAR" property="vcCsqxdm" />
+    <result column="VC_CSJDDM" jdbcType="VARCHAR" property="vcCsjddm" />
+    <result column="DT_CSRQ" jdbcType="TIMESTAMP" property="dtCsrq" />
+    <result column="VC_WBSWYY" jdbcType="VARCHAR" property="vcWbswyy" />
+    <result column="VC_EBM" jdbcType="VARCHAR" property="vcEbm" />
+    <result column="VC_YSQM" jdbcType="VARCHAR" property="vcYsqm" />
+    <result column="VC_HKHS" jdbcType="VARCHAR" property="vcHkhs" />
+    <result column="VC_WHSYY" jdbcType="VARCHAR" property="vcWhsyy" />
+    <result column="VC_HKQC" jdbcType="VARCHAR" property="vcHkqc" />
+    <result column="VC_QCSDM" jdbcType="VARCHAR" property="vcQcsdm" />
+    <result column="VC_QCQXDM" jdbcType="VARCHAR" property="vcQcqxdm" />
+    <result column="VC_QCJDDM" jdbcType="VARCHAR" property="vcQcjddm" />
+    <result column="DT_QCSJ" jdbcType="TIMESTAMP" property="dtQcsj" />
+    <result column="VC_BZ" jdbcType="VARCHAR" property="vcBz" />
+    <result column="VC_SHID" jdbcType="VARCHAR" property="vcShid" />
+    <result column="VC_KHZT" jdbcType="VARCHAR" property="vcKhzt" />
+    <result column="VC_KHID" jdbcType="VARCHAR" property="vcKhid" />
+    <result column="VC_KHJG" jdbcType="VARCHAR" property="vcKhjg" />
+    <result column="VC_HKXXDZ" jdbcType="VARCHAR" property="vcHkxxdz" />
+    <result column="VC_QCXXDZ" jdbcType="VARCHAR" property="vcQcxxdz" />
+    <result column="VC_SQGZDW" jdbcType="VARCHAR" property="vcSqgzdw" />
+    <result column="VC_HKJW" jdbcType="VARCHAR" property="vcHkjw" />
+    <result column="VC_QCJW" jdbcType="VARCHAR" property="vcQcjw" />
+    <result column="FENLEITJ" jdbcType="VARCHAR" property="fenleitj" />
+    <result column="VC_EZJSWJB" jdbcType="VARCHAR" property="vcEzjswjb" />
+    <result column="NB_EAJSWJBICD" jdbcType="VARCHAR" property="nbEajswjbicd" />
+    <result column="VC_EFBDSWSJJG" jdbcType="VARCHAR" property="vcEfbdswsjjg" />
+    <result column="VC_EFBDSWSJDW" jdbcType="VARCHAR" property="vcEfbdswsjdw" />
+    <result column="VC_FZJSWJB" jdbcType="VARCHAR" property="vcFzjswjb" />
+    <result column="NB_FAJSWJBICD" jdbcType="VARCHAR" property="nbFajswjbicd" />
+    <result column="VC_FFBDSWSJJG" jdbcType="VARCHAR" property="vcFfbdswsjjg" />
+    <result column="VC_FFBDSWSJDW" jdbcType="VARCHAR" property="vcFfbdswsjdw" />
+    <result column="VC_GZJSWJB" jdbcType="VARCHAR" property="vcGzjswjb" />
+    <result column="NB_GAJSWJBICD" jdbcType="VARCHAR" property="nbGajswjbicd" />
+    <result column="VC_GFBDSWSJJG" jdbcType="VARCHAR" property="vcGfbdswsjjg" />
+    <result column="VC_GFBDSWSJDW" jdbcType="VARCHAR" property="vcGfbdswsjdw" />
+    <result column="VC_HKQCS" jdbcType="VARCHAR" property="vcHkqcs" />
+    <result column="DT_TBRQ" jdbcType="TIMESTAMP" property="dtTbrq" />
+    <result column="VC_XXLY" jdbcType="VARCHAR" property="vcXxly" />
+    <result column="VC_QCSFDM" jdbcType="VARCHAR" property="vcQcsfdm" />
+    <result column="VC_QYID" jdbcType="VARCHAR" property="vcQyid" />
+    <result column="VC_SHZT" jdbcType="VARCHAR" property="vcShzt" />
+    <result column="VC_KHBZ" jdbcType="VARCHAR" property="vcKhbz" />
+    <result column="VC_XNXGBFZT" jdbcType="VARCHAR" property="vcXnxgbfzt" />
+    <result column="VC_TNBBFZT" jdbcType="VARCHAR" property="vcTnbbfzt" />
+    <result column="VC_ZLBFZT" jdbcType="VARCHAR" property="vcZlbfzt" />
+    <result column="VC_SDQR" jdbcType="VARCHAR" property="vcSdqr" />
+    <result column="FENLEITJMC" jdbcType="VARCHAR" property="fenleitjmc" />
+    <result column="VC_AZJSWJB1" jdbcType="VARCHAR" property="vcAzjswjb1" />
+    <result column="VC_BZJSWJB1" jdbcType="VARCHAR" property="vcBzjswjb1" />
+    <result column="VC_CZJSWJB1" jdbcType="VARCHAR" property="vcCzjswjb1" />
+    <result column="VC_DZJSWJB1" jdbcType="VARCHAR" property="vcDzjswjb1" />
+    <result column="VC_EZJSWJB1" jdbcType="VARCHAR" property="vcEzjswjb1" />
+    <result column="VC_FZJSWJB1" jdbcType="VARCHAR" property="vcFzjswjb1" />
+    <result column="VC_GZJSWJB1" jdbcType="VARCHAR" property="vcGzjswjb1" />
+    <result column="VC_SHWTGYY" jdbcType="VARCHAR" property="vcShwtgyy" />
+    <result column="VC_SHWTGYY1" jdbcType="VARCHAR" property="vcShwtgyy1" />
+    <result column="VC_DYQBH" jdbcType="VARCHAR" property="vcDyqbh" />
+    <result column="DT_YYSHSJ" jdbcType="TIMESTAMP" property="dtYyshsj" />
+    <result column="DT_SFSJ" jdbcType="TIMESTAMP" property="dtSfsj" />
+    <result column="DT_QXZSSJ" jdbcType="TIMESTAMP" property="dtQxzssj" />
+    <result column="VC_ZJLX" jdbcType="VARCHAR" property="vcZjlx" />
+    <result column="VC_RSQK" jdbcType="VARCHAR" property="vcRsqk" />
+    <result column="VC_WSHKSDM" jdbcType="VARCHAR" property="vcWshksdm" />
+    <result column="VC_WSHKQXDM" jdbcType="VARCHAR" property="vcWshkqxdm" />
+    <result column="VC_WSHKJDDM" jdbcType="VARCHAR" property="vcWshkjddm" />
+    <result column="VC_WSHKJW" jdbcType="VARCHAR" property="vcWshkjw" />
+    <result column="VC_GJHDQ" jdbcType="VARCHAR" property="vcGjhdq" />
+    <result column="VC_WSHKSHENDM" jdbcType="VARCHAR" property="vcWshkshendm" />
+    <result column="VC_JZQCS" jdbcType="VARCHAR" property="vcJzqcs" />
+    <result column="VC_JZSDM" jdbcType="VARCHAR" property="vcJzsdm" />
+    <result column="VC_JZQXDM" jdbcType="VARCHAR" property="vcJzqxdm" />
+    <result column="VC_JZJDDM" jdbcType="VARCHAR" property="vcJzjddm" />
+    <result column="VC_JZJW" jdbcType="VARCHAR" property="vcJzjw" />
+    <result column="VC_WSJZSHENDM" jdbcType="VARCHAR" property="vcWsjzshendm" />
+    <result column="VC_WSJZSDM" jdbcType="VARCHAR" property="vcWsjzsdm" />
+    <result column="VC_WSJZQXDM" jdbcType="VARCHAR" property="vcWsjzqxdm" />
+    <result column="VC_WSJZJDDM" jdbcType="VARCHAR" property="vcWsjzjddm" />
+    <result column="VC_WSJZJW" jdbcType="VARCHAR" property="vcWsjzjw" />
+    <result column="VC_GXBZ" jdbcType="VARCHAR" property="vcGxbz" />
+    <result column="VC_ID" jdbcType="VARCHAR" property="vcId" />
+    <result column="IS_PASS" jdbcType="VARCHAR" property="isPass" />
+    <result column="VALIDATE_DETAIL" jdbcType="VARCHAR" property="validateDetail" />
+    <result column="VALIDATE_DATE" jdbcType="TIMESTAMP" property="validateDate" />
+    <result column="VC_HZICD" jdbcType="VARCHAR" property="vcHzicd" />
+    <result column="UPLOADCOUNTRY" jdbcType="VARCHAR" property="uploadcountry" />
+    <result column="REQUESTID" jdbcType="VARCHAR" property="requestid" />
+    <result column="UPLOAD_AREAEPORT" jdbcType="VARCHAR" property="uploadAreaeport" />
+    <result column="VC_UP_FLAG" jdbcType="DECIMAL" property="vcUpFlag" />
+    <result column="VC_BH" jdbcType="VARCHAR" property="vcBh" />
+    <result column="VC_SFCF" jdbcType="DECIMAL" property="vcSfcf" />
+    <result column="VC_SJCSBZ" jdbcType="VARCHAR" property="vcSjcsbz" />
+    <result column="VC_JKID" jdbcType="VARCHAR" property="vcJkid" />
+    <result column="VC_SCSBYY" jdbcType="VARCHAR" property="vcScsbyy" />
+    <result column="VC_BGKCODE" jdbcType="VARCHAR" property="vcBgkcode" />
+    <result column="DT_QXXGSJ" jdbcType="TIMESTAMP" property="dtQxxgsj" />
+    <result column="VC_UP_SP_FLAG" jdbcType="DECIMAL" property="vcUpSpFlag" />
+  </resultMap>
+  <insert id="insert">
+    insert into ZJMB_SW_BGK (VC_BGKID, VC_CCID, VC_CKBZ, 
+      VC_XM, VC_JKDW, NB_JKYYBM, 
+      VC_JKYS, DT_JKSJ, VC_XB, 
+      VC_MZ, VC_ZY, VC_HJDZLX, 
+      VC_HJDZ, VC_HJDZBM, VC_HYZK, 
+      VC_WHCD, DT_SWRQ, VC_SZNL, 
+      VC_SFZHM, VC_RQFL, VC_SWDD, 
+      VC_SQCZDZLX, VC_SQXXDZ, VC_SQZGZDDW, 
+      VC_ICDBM, VC_ZDYJ, VC_GBSY, 
+      NB_GBSYBM, VC_QTJBZD, NB_QTJBZDICD, 
+      VC_JSXM, VC_JSLXDH, VC_JSDZ, 
+      VC_BGKLB, VC_ZYH, VC_SCBZ, 
+      VC_GLDWDM, VC_CJDWDM, DT_CJSJ, 
+      VC_CJYH, DT_XGSJ, VC_XGYH, 
+      VC_AZJSWJB, NB_AZJSWJBICD, VC_AFBDSWSJJG, 
+      VC_AFBDSWSJDW, VC_BZJSWJB, NB_BZJSWJBIDC, 
+      VC_BFBDSWSJJG, VC_BFBDSWSJDW, VC_CZJSWJB, 
+      NB_CZJSWJBICD, VC_CFBDSWSJJG, VC_CFBDSWSJDW, 
+      VC_DZJSWJB, NB_DAJSWJBICD, VC_DFBDSWSJJG, 
+      VC_DFBDSWSJDW, VC_SZSQBLJZZTZ, VC_BDCZXM, 
+      VC_YSZGX, VC_LXDZHGZDW, VC_BDCZDH, 
+      VC_SYTD, VC_BDCZQM, DT_DCRQ, 
+      DT_SCSJ, DT_LRSJ, VC_LRRID, 
+      VC_SHBZ, DT_SHSJ, VC_KPZT, 
+      VC_KPLY, VC_HKSDM, VC_HKQXDM, 
+      VC_HKJDDM, VC_CSSDM, VC_CSQXDM, 
+      VC_CSJDDM, DT_CSRQ, VC_WBSWYY, 
+      VC_EBM, VC_YSQM, VC_HKHS, 
+      VC_WHSYY, VC_HKQC, VC_QCSDM, 
+      VC_QCQXDM, VC_QCJDDM, DT_QCSJ, 
+      VC_BZ, VC_SHID, VC_KHZT, 
+      VC_KHID, VC_KHJG, VC_HKXXDZ, 
+      VC_QCXXDZ, VC_SQGZDW, VC_HKJW, 
+      VC_QCJW, FENLEITJ, VC_EZJSWJB, 
+      NB_EAJSWJBICD, VC_EFBDSWSJJG, VC_EFBDSWSJDW, 
+      VC_FZJSWJB, NB_FAJSWJBICD, VC_FFBDSWSJJG, 
+      VC_FFBDSWSJDW, VC_GZJSWJB, NB_GAJSWJBICD, 
+      VC_GFBDSWSJJG, VC_GFBDSWSJDW, VC_HKQCS, 
+      DT_TBRQ, VC_XXLY, VC_QCSFDM, 
+      VC_QYID, VC_SHZT, VC_KHBZ, 
+      VC_XNXGBFZT, VC_TNBBFZT, VC_ZLBFZT, 
+      VC_SDQR, FENLEITJMC, VC_AZJSWJB1, 
+      VC_BZJSWJB1, VC_CZJSWJB1, VC_DZJSWJB1, 
+      VC_EZJSWJB1, VC_FZJSWJB1, VC_GZJSWJB1, 
+      VC_SHWTGYY, VC_SHWTGYY1, VC_DYQBH, 
+      DT_YYSHSJ, DT_SFSJ, DT_QXZSSJ, 
+      VC_ZJLX, VC_RSQK, VC_WSHKSDM, 
+      VC_WSHKQXDM, VC_WSHKJDDM, VC_WSHKJW, 
+      VC_GJHDQ, VC_WSHKSHENDM, VC_JZQCS, 
+      VC_JZSDM, VC_JZQXDM, VC_JZJDDM, 
+      VC_JZJW, VC_WSJZSHENDM, VC_WSJZSDM, 
+      VC_WSJZQXDM, VC_WSJZJDDM, VC_WSJZJW, 
+      VC_GXBZ, VC_ID, IS_PASS, 
+      VALIDATE_DETAIL, VALIDATE_DATE, VC_HZICD, 
+      UPLOADCOUNTRY, REQUESTID, UPLOAD_AREAEPORT, 
+      VC_UP_FLAG, VC_BH, VC_SFCF, 
+      VC_SJCSBZ, VC_JKID, VC_SCSBYY, 
+      VC_BGKCODE, DT_QXXGSJ, VC_UP_SP_FLAG
+      )
+    values (#{vcBgkid,jdbcType=VARCHAR}, #{vcCcid,jdbcType=VARCHAR}, #{vcCkbz,jdbcType=VARCHAR}, 
+      #{vcXm,jdbcType=VARCHAR}, #{vcJkdw,jdbcType=VARCHAR}, #{nbJkyybm,jdbcType=VARCHAR}, 
+      #{vcJkys,jdbcType=VARCHAR}, #{dtJksj,jdbcType=TIMESTAMP}, #{vcXb,jdbcType=VARCHAR}, 
+      #{vcMz,jdbcType=VARCHAR}, #{vcZy,jdbcType=VARCHAR}, #{vcHjdzlx,jdbcType=VARCHAR}, 
+      #{vcHjdz,jdbcType=VARCHAR}, #{vcHjdzbm,jdbcType=VARCHAR}, #{vcHyzk,jdbcType=VARCHAR}, 
+      #{vcWhcd,jdbcType=VARCHAR}, #{dtSwrq,jdbcType=TIMESTAMP}, #{vcSznl,jdbcType=VARCHAR}, 
+      #{vcSfzhm,jdbcType=VARCHAR}, #{vcRqfl,jdbcType=VARCHAR}, #{vcSwdd,jdbcType=VARCHAR}, 
+      #{vcSqczdzlx,jdbcType=VARCHAR}, #{vcSqxxdz,jdbcType=VARCHAR}, #{vcSqzgzddw,jdbcType=VARCHAR}, 
+      #{vcIcdbm,jdbcType=VARCHAR}, #{vcZdyj,jdbcType=VARCHAR}, #{vcGbsy,jdbcType=VARCHAR}, 
+      #{nbGbsybm,jdbcType=VARCHAR}, #{vcQtjbzd,jdbcType=VARCHAR}, #{nbQtjbzdicd,jdbcType=DECIMAL}, 
+      #{vcJsxm,jdbcType=VARCHAR}, #{vcJslxdh,jdbcType=VARCHAR}, #{vcJsdz,jdbcType=VARCHAR}, 
+      #{vcBgklb,jdbcType=VARCHAR}, #{vcZyh,jdbcType=VARCHAR}, #{vcScbz,jdbcType=VARCHAR}, 
+      #{vcGldwdm,jdbcType=VARCHAR}, #{vcCjdwdm,jdbcType=VARCHAR}, #{dtCjsj,jdbcType=TIMESTAMP}, 
+      #{vcCjyh,jdbcType=VARCHAR}, #{dtXgsj,jdbcType=TIMESTAMP}, #{vcXgyh,jdbcType=VARCHAR}, 
+      #{vcAzjswjb,jdbcType=VARCHAR}, #{nbAzjswjbicd,jdbcType=VARCHAR}, #{vcAfbdswsjjg,jdbcType=VARCHAR}, 
+      #{vcAfbdswsjdw,jdbcType=VARCHAR}, #{vcBzjswjb,jdbcType=VARCHAR}, #{nbBzjswjbidc,jdbcType=VARCHAR}, 
+      #{vcBfbdswsjjg,jdbcType=VARCHAR}, #{vcBfbdswsjdw,jdbcType=VARCHAR}, #{vcCzjswjb,jdbcType=VARCHAR}, 
+      #{nbCzjswjbicd,jdbcType=VARCHAR}, #{vcCfbdswsjjg,jdbcType=VARCHAR}, #{vcCfbdswsjdw,jdbcType=VARCHAR}, 
+      #{vcDzjswjb,jdbcType=VARCHAR}, #{nbDajswjbicd,jdbcType=VARCHAR}, #{vcDfbdswsjjg,jdbcType=VARCHAR}, 
+      #{vcDfbdswsjdw,jdbcType=VARCHAR}, #{vcSzsqbljzztz,jdbcType=VARCHAR}, #{vcBdczxm,jdbcType=VARCHAR}, 
+      #{vcYszgx,jdbcType=VARCHAR}, #{vcLxdzhgzdw,jdbcType=VARCHAR}, #{vcBdczdh,jdbcType=VARCHAR}, 
+      #{vcSytd,jdbcType=VARCHAR}, #{vcBdczqm,jdbcType=VARCHAR}, #{dtDcrq,jdbcType=TIMESTAMP}, 
+      #{dtScsj,jdbcType=TIMESTAMP}, #{dtLrsj,jdbcType=TIMESTAMP}, #{vcLrrid,jdbcType=VARCHAR}, 
+      #{vcShbz,jdbcType=VARCHAR}, #{dtShsj,jdbcType=TIMESTAMP}, #{vcKpzt,jdbcType=VARCHAR}, 
+      #{vcKply,jdbcType=VARCHAR}, #{vcHksdm,jdbcType=VARCHAR}, #{vcHkqxdm,jdbcType=VARCHAR}, 
+      #{vcHkjddm,jdbcType=VARCHAR}, #{vcCssdm,jdbcType=VARCHAR}, #{vcCsqxdm,jdbcType=VARCHAR}, 
+      #{vcCsjddm,jdbcType=VARCHAR}, #{dtCsrq,jdbcType=TIMESTAMP}, #{vcWbswyy,jdbcType=VARCHAR}, 
+      #{vcEbm,jdbcType=VARCHAR}, #{vcYsqm,jdbcType=VARCHAR}, #{vcHkhs,jdbcType=VARCHAR}, 
+      #{vcWhsyy,jdbcType=VARCHAR}, #{vcHkqc,jdbcType=VARCHAR}, #{vcQcsdm,jdbcType=VARCHAR}, 
+      #{vcQcqxdm,jdbcType=VARCHAR}, #{vcQcjddm,jdbcType=VARCHAR}, #{dtQcsj,jdbcType=TIMESTAMP}, 
+      #{vcBz,jdbcType=VARCHAR}, #{vcShid,jdbcType=VARCHAR}, #{vcKhzt,jdbcType=VARCHAR}, 
+      #{vcKhid,jdbcType=VARCHAR}, #{vcKhjg,jdbcType=VARCHAR}, #{vcHkxxdz,jdbcType=VARCHAR}, 
+      #{vcQcxxdz,jdbcType=VARCHAR}, #{vcSqgzdw,jdbcType=VARCHAR}, #{vcHkjw,jdbcType=VARCHAR}, 
+      #{vcQcjw,jdbcType=VARCHAR}, #{fenleitj,jdbcType=VARCHAR}, #{vcEzjswjb,jdbcType=VARCHAR}, 
+      #{nbEajswjbicd,jdbcType=VARCHAR}, #{vcEfbdswsjjg,jdbcType=VARCHAR}, #{vcEfbdswsjdw,jdbcType=VARCHAR}, 
+      #{vcFzjswjb,jdbcType=VARCHAR}, #{nbFajswjbicd,jdbcType=VARCHAR}, #{vcFfbdswsjjg,jdbcType=VARCHAR}, 
+      #{vcFfbdswsjdw,jdbcType=VARCHAR}, #{vcGzjswjb,jdbcType=VARCHAR}, #{nbGajswjbicd,jdbcType=VARCHAR}, 
+      #{vcGfbdswsjjg,jdbcType=VARCHAR}, #{vcGfbdswsjdw,jdbcType=VARCHAR}, #{vcHkqcs,jdbcType=VARCHAR}, 
+      #{dtTbrq,jdbcType=TIMESTAMP}, #{vcXxly,jdbcType=VARCHAR}, #{vcQcsfdm,jdbcType=VARCHAR}, 
+      #{vcQyid,jdbcType=VARCHAR}, #{vcShzt,jdbcType=VARCHAR}, #{vcKhbz,jdbcType=VARCHAR}, 
+      #{vcXnxgbfzt,jdbcType=VARCHAR}, #{vcTnbbfzt,jdbcType=VARCHAR}, #{vcZlbfzt,jdbcType=VARCHAR}, 
+      #{vcSdqr,jdbcType=VARCHAR}, #{fenleitjmc,jdbcType=VARCHAR}, #{vcAzjswjb1,jdbcType=VARCHAR}, 
+      #{vcBzjswjb1,jdbcType=VARCHAR}, #{vcCzjswjb1,jdbcType=VARCHAR}, #{vcDzjswjb1,jdbcType=VARCHAR}, 
+      #{vcEzjswjb1,jdbcType=VARCHAR}, #{vcFzjswjb1,jdbcType=VARCHAR}, #{vcGzjswjb1,jdbcType=VARCHAR}, 
+      #{vcShwtgyy,jdbcType=VARCHAR}, #{vcShwtgyy1,jdbcType=VARCHAR}, #{vcDyqbh,jdbcType=VARCHAR}, 
+      #{dtYyshsj,jdbcType=TIMESTAMP}, #{dtSfsj,jdbcType=TIMESTAMP}, #{dtQxzssj,jdbcType=TIMESTAMP}, 
+      #{vcZjlx,jdbcType=VARCHAR}, #{vcRsqk,jdbcType=VARCHAR}, #{vcWshksdm,jdbcType=VARCHAR}, 
+      #{vcWshkqxdm,jdbcType=VARCHAR}, #{vcWshkjddm,jdbcType=VARCHAR}, #{vcWshkjw,jdbcType=VARCHAR}, 
+      #{vcGjhdq,jdbcType=VARCHAR}, #{vcWshkshendm,jdbcType=VARCHAR}, #{vcJzqcs,jdbcType=VARCHAR}, 
+      #{vcJzsdm,jdbcType=VARCHAR}, #{vcJzqxdm,jdbcType=VARCHAR}, #{vcJzjddm,jdbcType=VARCHAR}, 
+      #{vcJzjw,jdbcType=VARCHAR}, #{vcWsjzshendm,jdbcType=VARCHAR}, #{vcWsjzsdm,jdbcType=VARCHAR}, 
+      #{vcWsjzqxdm,jdbcType=VARCHAR}, #{vcWsjzjddm,jdbcType=VARCHAR}, #{vcWsjzjw,jdbcType=VARCHAR}, 
+      #{vcGxbz,jdbcType=VARCHAR}, #{vcId,jdbcType=VARCHAR}, #{isPass,jdbcType=VARCHAR}, 
+      #{validateDetail,jdbcType=VARCHAR}, #{validateDate,jdbcType=TIMESTAMP}, #{vcHzicd,jdbcType=VARCHAR}, 
+      #{uploadcountry,jdbcType=VARCHAR}, #{requestid,jdbcType=VARCHAR}, #{uploadAreaeport,jdbcType=VARCHAR}, 
+      #{vcUpFlag,jdbcType=DECIMAL}, #{vcBh,jdbcType=VARCHAR}, #{vcSfcf,jdbcType=DECIMAL}, 
+      #{vcSjcsbz,jdbcType=VARCHAR}, #{vcJkid,jdbcType=VARCHAR}, #{vcScsbyy,jdbcType=VARCHAR}, 
+      #{vcBgkcode,jdbcType=VARCHAR}, #{dtQxxgsj,jdbcType=TIMESTAMP}, #{vcUpSpFlag,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective">
+    insert into ZJMB_SW_BGK
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="vcBgkid != null">
+        VC_BGKID,
+      </if>
+      <if test="vcCcid != null">
+        VC_CCID,
+      </if>
+      <if test="vcCkbz != null">
+        VC_CKBZ,
+      </if>
+      <if test="vcXm != null">
+        VC_XM,
+      </if>
+      <if test="vcJkdw != null">
+        VC_JKDW,
+      </if>
+      <if test="nbJkyybm != null">
+        NB_JKYYBM,
+      </if>
+      <if test="vcJkys != null">
+        VC_JKYS,
+      </if>
+      <if test="dtJksj != null">
+        DT_JKSJ,
+      </if>
+      <if test="vcXb != null">
+        VC_XB,
+      </if>
+      <if test="vcMz != null">
+        VC_MZ,
+      </if>
+      <if test="vcZy != null">
+        VC_ZY,
+      </if>
+      <if test="vcHjdzlx != null">
+        VC_HJDZLX,
+      </if>
+      <if test="vcHjdz != null">
+        VC_HJDZ,
+      </if>
+      <if test="vcHjdzbm != null">
+        VC_HJDZBM,
+      </if>
+      <if test="vcHyzk != null">
+        VC_HYZK,
+      </if>
+      <if test="vcWhcd != null">
+        VC_WHCD,
+      </if>
+      <if test="dtSwrq != null">
+        DT_SWRQ,
+      </if>
+      <if test="vcSznl != null">
+        VC_SZNL,
+      </if>
+      <if test="vcSfzhm != null">
+        VC_SFZHM,
+      </if>
+      <if test="vcRqfl != null">
+        VC_RQFL,
+      </if>
+      <if test="vcSwdd != null">
+        VC_SWDD,
+      </if>
+      <if test="vcSqczdzlx != null">
+        VC_SQCZDZLX,
+      </if>
+      <if test="vcSqxxdz != null">
+        VC_SQXXDZ,
+      </if>
+      <if test="vcSqzgzddw != null">
+        VC_SQZGZDDW,
+      </if>
+      <if test="vcIcdbm != null">
+        VC_ICDBM,
+      </if>
+      <if test="vcZdyj != null">
+        VC_ZDYJ,
+      </if>
+      <if test="vcGbsy != null">
+        VC_GBSY,
+      </if>
+      <if test="nbGbsybm != null">
+        NB_GBSYBM,
+      </if>
+      <if test="vcQtjbzd != null">
+        VC_QTJBZD,
+      </if>
+      <if test="nbQtjbzdicd != null">
+        NB_QTJBZDICD,
+      </if>
+      <if test="vcJsxm != null">
+        VC_JSXM,
+      </if>
+      <if test="vcJslxdh != null">
+        VC_JSLXDH,
+      </if>
+      <if test="vcJsdz != null">
+        VC_JSDZ,
+      </if>
+      <if test="vcBgklb != null">
+        VC_BGKLB,
+      </if>
+      <if test="vcZyh != null">
+        VC_ZYH,
+      </if>
+      <if test="vcScbz != null">
+        VC_SCBZ,
+      </if>
+      <if test="vcGldwdm != null">
+        VC_GLDWDM,
+      </if>
+      <if test="vcCjdwdm != null">
+        VC_CJDWDM,
+      </if>
+      <if test="dtCjsj != null">
+        DT_CJSJ,
+      </if>
+      <if test="vcCjyh != null">
+        VC_CJYH,
+      </if>
+      <if test="dtXgsj != null">
+        DT_XGSJ,
+      </if>
+      <if test="vcXgyh != null">
+        VC_XGYH,
+      </if>
+      <if test="vcAzjswjb != null">
+        VC_AZJSWJB,
+      </if>
+      <if test="nbAzjswjbicd != null">
+        NB_AZJSWJBICD,
+      </if>
+      <if test="vcAfbdswsjjg != null">
+        VC_AFBDSWSJJG,
+      </if>
+      <if test="vcAfbdswsjdw != null">
+        VC_AFBDSWSJDW,
+      </if>
+      <if test="vcBzjswjb != null">
+        VC_BZJSWJB,
+      </if>
+      <if test="nbBzjswjbidc != null">
+        NB_BZJSWJBIDC,
+      </if>
+      <if test="vcBfbdswsjjg != null">
+        VC_BFBDSWSJJG,
+      </if>
+      <if test="vcBfbdswsjdw != null">
+        VC_BFBDSWSJDW,
+      </if>
+      <if test="vcCzjswjb != null">
+        VC_CZJSWJB,
+      </if>
+      <if test="nbCzjswjbicd != null">
+        NB_CZJSWJBICD,
+      </if>
+      <if test="vcCfbdswsjjg != null">
+        VC_CFBDSWSJJG,
+      </if>
+      <if test="vcCfbdswsjdw != null">
+        VC_CFBDSWSJDW,
+      </if>
+      <if test="vcDzjswjb != null">
+        VC_DZJSWJB,
+      </if>
+      <if test="nbDajswjbicd != null">
+        NB_DAJSWJBICD,
+      </if>
+      <if test="vcDfbdswsjjg != null">
+        VC_DFBDSWSJJG,
+      </if>
+      <if test="vcDfbdswsjdw != null">
+        VC_DFBDSWSJDW,
+      </if>
+      <if test="vcSzsqbljzztz != null">
+        VC_SZSQBLJZZTZ,
+      </if>
+      <if test="vcBdczxm != null">
+        VC_BDCZXM,
+      </if>
+      <if test="vcYszgx != null">
+        VC_YSZGX,
+      </if>
+      <if test="vcLxdzhgzdw != null">
+        VC_LXDZHGZDW,
+      </if>
+      <if test="vcBdczdh != null">
+        VC_BDCZDH,
+      </if>
+      <if test="vcSytd != null">
+        VC_SYTD,
+      </if>
+      <if test="vcBdczqm != null">
+        VC_BDCZQM,
+      </if>
+      <if test="dtDcrq != null">
+        DT_DCRQ,
+      </if>
+      <if test="dtScsj != null">
+        DT_SCSJ,
+      </if>
+      <if test="dtLrsj != null">
+        DT_LRSJ,
+      </if>
+      <if test="vcLrrid != null">
+        VC_LRRID,
+      </if>
+      <if test="vcShbz != null">
+        VC_SHBZ,
+      </if>
+      <if test="dtShsj != null">
+        DT_SHSJ,
+      </if>
+      <if test="vcKpzt != null">
+        VC_KPZT,
+      </if>
+      <if test="vcKply != null">
+        VC_KPLY,
+      </if>
+      <if test="vcHksdm != null">
+        VC_HKSDM,
+      </if>
+      <if test="vcHkqxdm != null">
+        VC_HKQXDM,
+      </if>
+      <if test="vcHkjddm != null">
+        VC_HKJDDM,
+      </if>
+      <if test="vcCssdm != null">
+        VC_CSSDM,
+      </if>
+      <if test="vcCsqxdm != null">
+        VC_CSQXDM,
+      </if>
+      <if test="vcCsjddm != null">
+        VC_CSJDDM,
+      </if>
+      <if test="dtCsrq != null">
+        DT_CSRQ,
+      </if>
+      <if test="vcWbswyy != null">
+        VC_WBSWYY,
+      </if>
+      <if test="vcEbm != null">
+        VC_EBM,
+      </if>
+      <if test="vcYsqm != null">
+        VC_YSQM,
+      </if>
+      <if test="vcHkhs != null">
+        VC_HKHS,
+      </if>
+      <if test="vcWhsyy != null">
+        VC_WHSYY,
+      </if>
+      <if test="vcHkqc != null">
+        VC_HKQC,
+      </if>
+      <if test="vcQcsdm != null">
+        VC_QCSDM,
+      </if>
+      <if test="vcQcqxdm != null">
+        VC_QCQXDM,
+      </if>
+      <if test="vcQcjddm != null">
+        VC_QCJDDM,
+      </if>
+      <if test="dtQcsj != null">
+        DT_QCSJ,
+      </if>
+      <if test="vcBz != null">
+        VC_BZ,
+      </if>
+      <if test="vcShid != null">
+        VC_SHID,
+      </if>
+      <if test="vcKhzt != null">
+        VC_KHZT,
+      </if>
+      <if test="vcKhid != null">
+        VC_KHID,
+      </if>
+      <if test="vcKhjg != null">
+        VC_KHJG,
+      </if>
+      <if test="vcHkxxdz != null">
+        VC_HKXXDZ,
+      </if>
+      <if test="vcQcxxdz != null">
+        VC_QCXXDZ,
+      </if>
+      <if test="vcSqgzdw != null">
+        VC_SQGZDW,
+      </if>
+      <if test="vcHkjw != null">
+        VC_HKJW,
+      </if>
+      <if test="vcQcjw != null">
+        VC_QCJW,
+      </if>
+      <if test="fenleitj != null">
+        FENLEITJ,
+      </if>
+      <if test="vcEzjswjb != null">
+        VC_EZJSWJB,
+      </if>
+      <if test="nbEajswjbicd != null">
+        NB_EAJSWJBICD,
+      </if>
+      <if test="vcEfbdswsjjg != null">
+        VC_EFBDSWSJJG,
+      </if>
+      <if test="vcEfbdswsjdw != null">
+        VC_EFBDSWSJDW,
+      </if>
+      <if test="vcFzjswjb != null">
+        VC_FZJSWJB,
+      </if>
+      <if test="nbFajswjbicd != null">
+        NB_FAJSWJBICD,
+      </if>
+      <if test="vcFfbdswsjjg != null">
+        VC_FFBDSWSJJG,
+      </if>
+      <if test="vcFfbdswsjdw != null">
+        VC_FFBDSWSJDW,
+      </if>
+      <if test="vcGzjswjb != null">
+        VC_GZJSWJB,
+      </if>
+      <if test="nbGajswjbicd != null">
+        NB_GAJSWJBICD,
+      </if>
+      <if test="vcGfbdswsjjg != null">
+        VC_GFBDSWSJJG,
+      </if>
+      <if test="vcGfbdswsjdw != null">
+        VC_GFBDSWSJDW,
+      </if>
+      <if test="vcHkqcs != null">
+        VC_HKQCS,
+      </if>
+      <if test="dtTbrq != null">
+        DT_TBRQ,
+      </if>
+      <if test="vcXxly != null">
+        VC_XXLY,
+      </if>
+      <if test="vcQcsfdm != null">
+        VC_QCSFDM,
+      </if>
+      <if test="vcQyid != null">
+        VC_QYID,
+      </if>
+      <if test="vcShzt != null">
+        VC_SHZT,
+      </if>
+      <if test="vcKhbz != null">
+        VC_KHBZ,
+      </if>
+      <if test="vcXnxgbfzt != null">
+        VC_XNXGBFZT,
+      </if>
+      <if test="vcTnbbfzt != null">
+        VC_TNBBFZT,
+      </if>
+      <if test="vcZlbfzt != null">
+        VC_ZLBFZT,
+      </if>
+      <if test="vcSdqr != null">
+        VC_SDQR,
+      </if>
+      <if test="fenleitjmc != null">
+        FENLEITJMC,
+      </if>
+      <if test="vcAzjswjb1 != null">
+        VC_AZJSWJB1,
+      </if>
+      <if test="vcBzjswjb1 != null">
+        VC_BZJSWJB1,
+      </if>
+      <if test="vcCzjswjb1 != null">
+        VC_CZJSWJB1,
+      </if>
+      <if test="vcDzjswjb1 != null">
+        VC_DZJSWJB1,
+      </if>
+      <if test="vcEzjswjb1 != null">
+        VC_EZJSWJB1,
+      </if>
+      <if test="vcFzjswjb1 != null">
+        VC_FZJSWJB1,
+      </if>
+      <if test="vcGzjswjb1 != null">
+        VC_GZJSWJB1,
+      </if>
+      <if test="vcShwtgyy != null">
+        VC_SHWTGYY,
+      </if>
+      <if test="vcShwtgyy1 != null">
+        VC_SHWTGYY1,
+      </if>
+      <if test="vcDyqbh != null">
+        VC_DYQBH,
+      </if>
+      <if test="dtYyshsj != null">
+        DT_YYSHSJ,
+      </if>
+      <if test="dtSfsj != null">
+        DT_SFSJ,
+      </if>
+      <if test="dtQxzssj != null">
+        DT_QXZSSJ,
+      </if>
+      <if test="vcZjlx != null">
+        VC_ZJLX,
+      </if>
+      <if test="vcRsqk != null">
+        VC_RSQK,
+      </if>
+      <if test="vcWshksdm != null">
+        VC_WSHKSDM,
+      </if>
+      <if test="vcWshkqxdm != null">
+        VC_WSHKQXDM,
+      </if>
+      <if test="vcWshkjddm != null">
+        VC_WSHKJDDM,
+      </if>
+      <if test="vcWshkjw != null">
+        VC_WSHKJW,
+      </if>
+      <if test="vcGjhdq != null">
+        VC_GJHDQ,
+      </if>
+      <if test="vcWshkshendm != null">
+        VC_WSHKSHENDM,
+      </if>
+      <if test="vcJzqcs != null">
+        VC_JZQCS,
+      </if>
+      <if test="vcJzsdm != null">
+        VC_JZSDM,
+      </if>
+      <if test="vcJzqxdm != null">
+        VC_JZQXDM,
+      </if>
+      <if test="vcJzjddm != null">
+        VC_JZJDDM,
+      </if>
+      <if test="vcJzjw != null">
+        VC_JZJW,
+      </if>
+      <if test="vcWsjzshendm != null">
+        VC_WSJZSHENDM,
+      </if>
+      <if test="vcWsjzsdm != null">
+        VC_WSJZSDM,
+      </if>
+      <if test="vcWsjzqxdm != null">
+        VC_WSJZQXDM,
+      </if>
+      <if test="vcWsjzjddm != null">
+        VC_WSJZJDDM,
+      </if>
+      <if test="vcWsjzjw != null">
+        VC_WSJZJW,
+      </if>
+      <if test="vcGxbz != null">
+        VC_GXBZ,
+      </if>
+      <if test="vcId != null">
+        VC_ID,
+      </if>
+      <if test="isPass != null">
+        IS_PASS,
+      </if>
+      <if test="validateDetail != null">
+        VALIDATE_DETAIL,
+      </if>
+      <if test="validateDate != null">
+        VALIDATE_DATE,
+      </if>
+      <if test="vcHzicd != null">
+        VC_HZICD,
+      </if>
+      <if test="uploadcountry != null">
+        UPLOADCOUNTRY,
+      </if>
+      <if test="requestid != null">
+        REQUESTID,
+      </if>
+      <if test="uploadAreaeport != null">
+        UPLOAD_AREAEPORT,
+      </if>
+      <if test="vcUpFlag != null">
+        VC_UP_FLAG,
+      </if>
+      <if test="vcBh != null">
+        VC_BH,
+      </if>
+      <if test="vcSfcf != null">
+        VC_SFCF,
+      </if>
+      <if test="vcSjcsbz != null">
+        VC_SJCSBZ,
+      </if>
+      <if test="vcJkid != null">
+        VC_JKID,
+      </if>
+      <if test="vcScsbyy != null">
+        VC_SCSBYY,
+      </if>
+      <if test="vcBgkcode != null">
+        VC_BGKCODE,
+      </if>
+      <if test="dtQxxgsj != null">
+        DT_QXXGSJ,
+      </if>
+      <if test="vcUpSpFlag != null">
+        VC_UP_SP_FLAG,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="vcBgkid != null">
+        #{vcBgkid,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCcid != null">
+        #{vcCcid,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCkbz != null">
+        #{vcCkbz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcXm != null">
+        #{vcXm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJkdw != null">
+        #{vcJkdw,jdbcType=VARCHAR},
+      </if>
+      <if test="nbJkyybm != null">
+        #{nbJkyybm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJkys != null">
+        #{vcJkys,jdbcType=VARCHAR},
+      </if>
+      <if test="dtJksj != null">
+        #{dtJksj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcXb != null">
+        #{vcXb,jdbcType=VARCHAR},
+      </if>
+      <if test="vcMz != null">
+        #{vcMz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcZy != null">
+        #{vcZy,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHjdzlx != null">
+        #{vcHjdzlx,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHjdz != null">
+        #{vcHjdz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHjdzbm != null">
+        #{vcHjdzbm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHyzk != null">
+        #{vcHyzk,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWhcd != null">
+        #{vcWhcd,jdbcType=VARCHAR},
+      </if>
+      <if test="dtSwrq != null">
+        #{dtSwrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcSznl != null">
+        #{vcSznl,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSfzhm != null">
+        #{vcSfzhm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcRqfl != null">
+        #{vcRqfl,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSwdd != null">
+        #{vcSwdd,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSqczdzlx != null">
+        #{vcSqczdzlx,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSqxxdz != null">
+        #{vcSqxxdz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSqzgzddw != null">
+        #{vcSqzgzddw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcIcdbm != null">
+        #{vcIcdbm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcZdyj != null">
+        #{vcZdyj,jdbcType=VARCHAR},
+      </if>
+      <if test="vcGbsy != null">
+        #{vcGbsy,jdbcType=VARCHAR},
+      </if>
+      <if test="nbGbsybm != null">
+        #{nbGbsybm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcQtjbzd != null">
+        #{vcQtjbzd,jdbcType=VARCHAR},
+      </if>
+      <if test="nbQtjbzdicd != null">
+        #{nbQtjbzdicd,jdbcType=DECIMAL},
+      </if>
+      <if test="vcJsxm != null">
+        #{vcJsxm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJslxdh != null">
+        #{vcJslxdh,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJsdz != null">
+        #{vcJsdz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcBgklb != null">
+        #{vcBgklb,jdbcType=VARCHAR},
+      </if>
+      <if test="vcZyh != null">
+        #{vcZyh,jdbcType=VARCHAR},
+      </if>
+      <if test="vcScbz != null">
+        #{vcScbz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcGldwdm != null">
+        #{vcGldwdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCjdwdm != null">
+        #{vcCjdwdm,jdbcType=VARCHAR},
+      </if>
+      <if test="dtCjsj != null">
+        #{dtCjsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcCjyh != null">
+        #{vcCjyh,jdbcType=VARCHAR},
+      </if>
+      <if test="dtXgsj != null">
+        #{dtXgsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcXgyh != null">
+        #{vcXgyh,jdbcType=VARCHAR},
+      </if>
+      <if test="vcAzjswjb != null">
+        #{vcAzjswjb,jdbcType=VARCHAR},
+      </if>
+      <if test="nbAzjswjbicd != null">
+        #{nbAzjswjbicd,jdbcType=VARCHAR},
+      </if>
+      <if test="vcAfbdswsjjg != null">
+        #{vcAfbdswsjjg,jdbcType=VARCHAR},
+      </if>
+      <if test="vcAfbdswsjdw != null">
+        #{vcAfbdswsjdw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcBzjswjb != null">
+        #{vcBzjswjb,jdbcType=VARCHAR},
+      </if>
+      <if test="nbBzjswjbidc != null">
+        #{nbBzjswjbidc,jdbcType=VARCHAR},
+      </if>
+      <if test="vcBfbdswsjjg != null">
+        #{vcBfbdswsjjg,jdbcType=VARCHAR},
+      </if>
+      <if test="vcBfbdswsjdw != null">
+        #{vcBfbdswsjdw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCzjswjb != null">
+        #{vcCzjswjb,jdbcType=VARCHAR},
+      </if>
+      <if test="nbCzjswjbicd != null">
+        #{nbCzjswjbicd,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCfbdswsjjg != null">
+        #{vcCfbdswsjjg,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCfbdswsjdw != null">
+        #{vcCfbdswsjdw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcDzjswjb != null">
+        #{vcDzjswjb,jdbcType=VARCHAR},
+      </if>
+      <if test="nbDajswjbicd != null">
+        #{nbDajswjbicd,jdbcType=VARCHAR},
+      </if>
+      <if test="vcDfbdswsjjg != null">
+        #{vcDfbdswsjjg,jdbcType=VARCHAR},
+      </if>
+      <if test="vcDfbdswsjdw != null">
+        #{vcDfbdswsjdw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSzsqbljzztz != null">
+        #{vcSzsqbljzztz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcBdczxm != null">
+        #{vcBdczxm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcYszgx != null">
+        #{vcYszgx,jdbcType=VARCHAR},
+      </if>
+      <if test="vcLxdzhgzdw != null">
+        #{vcLxdzhgzdw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcBdczdh != null">
+        #{vcBdczdh,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSytd != null">
+        #{vcSytd,jdbcType=VARCHAR},
+      </if>
+      <if test="vcBdczqm != null">
+        #{vcBdczqm,jdbcType=VARCHAR},
+      </if>
+      <if test="dtDcrq != null">
+        #{dtDcrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dtScsj != null">
+        #{dtScsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dtLrsj != null">
+        #{dtLrsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcLrrid != null">
+        #{vcLrrid,jdbcType=VARCHAR},
+      </if>
+      <if test="vcShbz != null">
+        #{vcShbz,jdbcType=VARCHAR},
+      </if>
+      <if test="dtShsj != null">
+        #{dtShsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcKpzt != null">
+        #{vcKpzt,jdbcType=VARCHAR},
+      </if>
+      <if test="vcKply != null">
+        #{vcKply,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHksdm != null">
+        #{vcHksdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHkqxdm != null">
+        #{vcHkqxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHkjddm != null">
+        #{vcHkjddm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCssdm != null">
+        #{vcCssdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCsqxdm != null">
+        #{vcCsqxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCsjddm != null">
+        #{vcCsjddm,jdbcType=VARCHAR},
+      </if>
+      <if test="dtCsrq != null">
+        #{dtCsrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcWbswyy != null">
+        #{vcWbswyy,jdbcType=VARCHAR},
+      </if>
+      <if test="vcEbm != null">
+        #{vcEbm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcYsqm != null">
+        #{vcYsqm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHkhs != null">
+        #{vcHkhs,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWhsyy != null">
+        #{vcWhsyy,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHkqc != null">
+        #{vcHkqc,jdbcType=VARCHAR},
+      </if>
+      <if test="vcQcsdm != null">
+        #{vcQcsdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcQcqxdm != null">
+        #{vcQcqxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcQcjddm != null">
+        #{vcQcjddm,jdbcType=VARCHAR},
+      </if>
+      <if test="dtQcsj != null">
+        #{dtQcsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcBz != null">
+        #{vcBz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcShid != null">
+        #{vcShid,jdbcType=VARCHAR},
+      </if>
+      <if test="vcKhzt != null">
+        #{vcKhzt,jdbcType=VARCHAR},
+      </if>
+      <if test="vcKhid != null">
+        #{vcKhid,jdbcType=VARCHAR},
+      </if>
+      <if test="vcKhjg != null">
+        #{vcKhjg,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHkxxdz != null">
+        #{vcHkxxdz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcQcxxdz != null">
+        #{vcQcxxdz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSqgzdw != null">
+        #{vcSqgzdw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHkjw != null">
+        #{vcHkjw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcQcjw != null">
+        #{vcQcjw,jdbcType=VARCHAR},
+      </if>
+      <if test="fenleitj != null">
+        #{fenleitj,jdbcType=VARCHAR},
+      </if>
+      <if test="vcEzjswjb != null">
+        #{vcEzjswjb,jdbcType=VARCHAR},
+      </if>
+      <if test="nbEajswjbicd != null">
+        #{nbEajswjbicd,jdbcType=VARCHAR},
+      </if>
+      <if test="vcEfbdswsjjg != null">
+        #{vcEfbdswsjjg,jdbcType=VARCHAR},
+      </if>
+      <if test="vcEfbdswsjdw != null">
+        #{vcEfbdswsjdw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcFzjswjb != null">
+        #{vcFzjswjb,jdbcType=VARCHAR},
+      </if>
+      <if test="nbFajswjbicd != null">
+        #{nbFajswjbicd,jdbcType=VARCHAR},
+      </if>
+      <if test="vcFfbdswsjjg != null">
+        #{vcFfbdswsjjg,jdbcType=VARCHAR},
+      </if>
+      <if test="vcFfbdswsjdw != null">
+        #{vcFfbdswsjdw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcGzjswjb != null">
+        #{vcGzjswjb,jdbcType=VARCHAR},
+      </if>
+      <if test="nbGajswjbicd != null">
+        #{nbGajswjbicd,jdbcType=VARCHAR},
+      </if>
+      <if test="vcGfbdswsjjg != null">
+        #{vcGfbdswsjjg,jdbcType=VARCHAR},
+      </if>
+      <if test="vcGfbdswsjdw != null">
+        #{vcGfbdswsjdw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcHkqcs != null">
+        #{vcHkqcs,jdbcType=VARCHAR},
+      </if>
+      <if test="dtTbrq != null">
+        #{dtTbrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcXxly != null">
+        #{vcXxly,jdbcType=VARCHAR},
+      </if>
+      <if test="vcQcsfdm != null">
+        #{vcQcsfdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcQyid != null">
+        #{vcQyid,jdbcType=VARCHAR},
+      </if>
+      <if test="vcShzt != null">
+        #{vcShzt,jdbcType=VARCHAR},
+      </if>
+      <if test="vcKhbz != null">
+        #{vcKhbz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcXnxgbfzt != null">
+        #{vcXnxgbfzt,jdbcType=VARCHAR},
+      </if>
+      <if test="vcTnbbfzt != null">
+        #{vcTnbbfzt,jdbcType=VARCHAR},
+      </if>
+      <if test="vcZlbfzt != null">
+        #{vcZlbfzt,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSdqr != null">
+        #{vcSdqr,jdbcType=VARCHAR},
+      </if>
+      <if test="fenleitjmc != null">
+        #{fenleitjmc,jdbcType=VARCHAR},
+      </if>
+      <if test="vcAzjswjb1 != null">
+        #{vcAzjswjb1,jdbcType=VARCHAR},
+      </if>
+      <if test="vcBzjswjb1 != null">
+        #{vcBzjswjb1,jdbcType=VARCHAR},
+      </if>
+      <if test="vcCzjswjb1 != null">
+        #{vcCzjswjb1,jdbcType=VARCHAR},
+      </if>
+      <if test="vcDzjswjb1 != null">
+        #{vcDzjswjb1,jdbcType=VARCHAR},
+      </if>
+      <if test="vcEzjswjb1 != null">
+        #{vcEzjswjb1,jdbcType=VARCHAR},
+      </if>
+      <if test="vcFzjswjb1 != null">
+        #{vcFzjswjb1,jdbcType=VARCHAR},
+      </if>
+      <if test="vcGzjswjb1 != null">
+        #{vcGzjswjb1,jdbcType=VARCHAR},
+      </if>
+      <if test="vcShwtgyy != null">
+        #{vcShwtgyy,jdbcType=VARCHAR},
+      </if>
+      <if test="vcShwtgyy1 != null">
+        #{vcShwtgyy1,jdbcType=VARCHAR},
+      </if>
+      <if test="vcDyqbh != null">
+        #{vcDyqbh,jdbcType=VARCHAR},
+      </if>
+      <if test="dtYyshsj != null">
+        #{dtYyshsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dtSfsj != null">
+        #{dtSfsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dtQxzssj != null">
+        #{dtQxzssj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcZjlx != null">
+        #{vcZjlx,jdbcType=VARCHAR},
+      </if>
+      <if test="vcRsqk != null">
+        #{vcRsqk,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWshksdm != null">
+        #{vcWshksdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWshkqxdm != null">
+        #{vcWshkqxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWshkjddm != null">
+        #{vcWshkjddm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWshkjw != null">
+        #{vcWshkjw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcGjhdq != null">
+        #{vcGjhdq,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWshkshendm != null">
+        #{vcWshkshendm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJzqcs != null">
+        #{vcJzqcs,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJzsdm != null">
+        #{vcJzsdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJzqxdm != null">
+        #{vcJzqxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJzjddm != null">
+        #{vcJzjddm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJzjw != null">
+        #{vcJzjw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWsjzshendm != null">
+        #{vcWsjzshendm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWsjzsdm != null">
+        #{vcWsjzsdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWsjzqxdm != null">
+        #{vcWsjzqxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWsjzjddm != null">
+        #{vcWsjzjddm,jdbcType=VARCHAR},
+      </if>
+      <if test="vcWsjzjw != null">
+        #{vcWsjzjw,jdbcType=VARCHAR},
+      </if>
+      <if test="vcGxbz != null">
+        #{vcGxbz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcId != null">
+        #{vcId,jdbcType=VARCHAR},
+      </if>
+      <if test="isPass != null">
+        #{isPass,jdbcType=VARCHAR},
+      </if>
+      <if test="validateDetail != null">
+        #{validateDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="validateDate != null">
+        #{validateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcHzicd != null">
+        #{vcHzicd,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadcountry != null">
+        #{uploadcountry,jdbcType=VARCHAR},
+      </if>
+      <if test="requestid != null">
+        #{requestid,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadAreaeport != null">
+        #{uploadAreaeport,jdbcType=VARCHAR},
+      </if>
+      <if test="vcUpFlag != null">
+        #{vcUpFlag,jdbcType=DECIMAL},
+      </if>
+      <if test="vcBh != null">
+        #{vcBh,jdbcType=VARCHAR},
+      </if>
+      <if test="vcSfcf != null">
+        #{vcSfcf,jdbcType=DECIMAL},
+      </if>
+      <if test="vcSjcsbz != null">
+        #{vcSjcsbz,jdbcType=VARCHAR},
+      </if>
+      <if test="vcJkid != null">
+        #{vcJkid,jdbcType=VARCHAR},
+      </if>
+      <if test="vcScsbyy != null">
+        #{vcScsbyy,jdbcType=VARCHAR},
+      </if>
+      <if test="vcBgkcode != null">
+        #{vcBgkcode,jdbcType=VARCHAR},
+      </if>
+      <if test="dtQxxgsj != null">
+        #{dtQxxgsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vcUpSpFlag != null">
+        #{vcUpSpFlag,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  
+   <sql id="Base_Column_List">
+    VC_BGKID, VC_CCID, VC_CKBZ, VC_XM, VC_JKDW, NB_JKYYBM, VC_JKYS, DT_JKSJ, VC_XB, VC_MZ, 
+    VC_ZY, VC_HJDZLX, VC_HJDZ, VC_HJDZBM, VC_HYZK, VC_WHCD, DT_SWRQ, VC_SZNL, VC_SFZHM, 
+    VC_RQFL, VC_SWDD, VC_SQCZDZLX, VC_SQXXDZ, VC_SQZGZDDW, VC_ICDBM, VC_ZDYJ, VC_GBSY, 
+    NB_GBSYBM, VC_QTJBZD, NB_QTJBZDICD, VC_JSXM, VC_JSLXDH, VC_JSDZ, VC_BGKLB, VC_ZYH, 
+    VC_SCBZ, VC_GLDWDM, VC_CJDWDM, DT_CJSJ, VC_CJYH, DT_XGSJ, VC_XGYH, VC_AZJSWJB, NB_AZJSWJBICD, 
+    VC_AFBDSWSJJG, VC_AFBDSWSJDW, VC_BZJSWJB, NB_BZJSWJBIDC, VC_BFBDSWSJJG, VC_BFBDSWSJDW, 
+    VC_CZJSWJB, NB_CZJSWJBICD, VC_CFBDSWSJJG, VC_CFBDSWSJDW, VC_DZJSWJB, NB_DAJSWJBICD, 
+    VC_DFBDSWSJJG, VC_DFBDSWSJDW, VC_SZSQBLJZZTZ, VC_BDCZXM, VC_YSZGX, VC_LXDZHGZDW, 
+    VC_BDCZDH, VC_SYTD, VC_BDCZQM, DT_DCRQ, DT_SCSJ, DT_LRSJ, VC_LRRID, VC_SHBZ, DT_SHSJ, 
+    VC_KPZT, VC_KPLY, VC_HKSDM, VC_HKQXDM, VC_HKJDDM, VC_CSSDM, VC_CSQXDM, VC_CSJDDM, 
+    DT_CSRQ, VC_WBSWYY, VC_EBM, VC_YSQM, VC_HKHS, VC_WHSYY, VC_HKQC, VC_QCSDM, VC_QCQXDM, 
+    VC_QCJDDM, DT_QCSJ, VC_BZ, VC_SHID, VC_KHZT, VC_KHID, VC_KHJG, VC_HKXXDZ, VC_QCXXDZ, 
+    VC_SQGZDW, VC_HKJW, VC_QCJW, FENLEITJ, VC_EZJSWJB, NB_EAJSWJBICD, VC_EFBDSWSJJG, 
+    VC_EFBDSWSJDW, VC_FZJSWJB, NB_FAJSWJBICD, VC_FFBDSWSJJG, VC_FFBDSWSJDW, VC_GZJSWJB, 
+    NB_GAJSWJBICD, VC_GFBDSWSJJG, VC_GFBDSWSJDW, VC_HKQCS, DT_TBRQ, VC_XXLY, VC_QCSFDM, 
+    VC_QYID, VC_SHZT, VC_KHBZ, VC_XNXGBFZT, VC_TNBBFZT, VC_ZLBFZT, VC_SDQR, FENLEITJMC, 
+    VC_AZJSWJB1, VC_BZJSWJB1, VC_CZJSWJB1, VC_DZJSWJB1, VC_EZJSWJB1, VC_FZJSWJB1, VC_GZJSWJB1, 
+    VC_SHWTGYY, VC_SHWTGYY1, VC_DYQBH, DT_YYSHSJ, DT_SFSJ, DT_QXZSSJ, VC_ZJLX, VC_RSQK, 
+    VC_WSHKSDM, VC_WSHKQXDM, VC_WSHKJDDM, VC_WSHKJW, VC_GJHDQ, VC_WSHKSHENDM, VC_JZQCS, 
+    VC_JZSDM, VC_JZQXDM, VC_JZJDDM, VC_JZJW, VC_WSJZSHENDM, VC_WSJZSDM, VC_WSJZQXDM, 
+    VC_WSJZJDDM, VC_WSJZJW, VC_GXBZ, VC_ID, IS_PASS, VALIDATE_DETAIL, VALIDATE_DATE, 
+    VC_HZICD, UPLOADCOUNTRY, REQUESTID, UPLOAD_AREAEPORT, VC_UP_FLAG, VC_BH, VC_SFCF, 
+    VC_SJCSBZ, VC_JKID, VC_SCSBYY, VC_BGKCODE, DT_QXXGSJ, VC_UP_SP_FLAG
+  </sql>
+
+	<select id="selectByVcUpSpFLAG" resultMap="BaseResultMap">
+      select VC_XM,
+             VC_SFZHM,
+             (select name from code_info c where c.code = VC_HKJDDM) || '' ||
+             VC_HKXXDZ as VC_HKXXDZ,
+             VC_JSLXDH,
+             DT_SWRQ,
+             VC_AZJSWJB || '' || VC_BZJSWJB || '' || VC_CZJSWJB || '' ||
+             VC_DZJSWJB as VC_AZJSWJB
+		from ZJMB_SW_BGK s
+		where s.VC_UP_SP_FLAG = #{vcUpSpFlag}
+		<![CDATA[
+		AND ROWNUM <= 1000 ORDER BY s.dt_swrq
+		]]>
+	</select>
+  
+  
+</mapper>
