@@ -6,11 +6,14 @@ import com.wonders.tzde.utils.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,6 +43,23 @@ public class ZjmbSwBgkController {
             }
 
             List<Map<String, Object>> list = zjmbSwBgkService.getSwData(params);
+            if (CollectionUtils.isEmpty(list)) {
+                return Result.fail(-1, "没有可获取的数据", null);
+            }
+
+            // 更新状态，并去除返回值中不需要的字段
+            List<String> vcBgkidList = new ArrayList<>();
+            list.forEach(p -> {
+                if (p.get("vcBgkid") != null) {
+                    vcBgkidList.add((String) p.get("vcBgkid"));
+                }
+                p.remove("vcBgkid");
+            });
+            Map<String, Object> updateParams = new HashMap<>();
+            updateParams.put("vcUpSpFlag", 1);
+            updateParams.put("vcBgkidList", vcBgkidList);
+            zjmbSwBgkService.updateUploadFlag(updateParams);
+
             return Result.success(list);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);

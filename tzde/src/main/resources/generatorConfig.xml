@@ -4,7 +4,7 @@
 
 	<classPathEntry location="F:\ojdbc6-11.2.0.3.jar" />
 
-	<context id="tzjkBase" targetRuntime="MyBatis3">
+	<context id="tzde" targetRuntime="MyBatis3">
 		<commentGenerator>
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>

@@ -21,4 +21,9 @@ public class ZjmbSwBgkServiceImpl implements ZjmbSwBgkService {
 	public List<Map<String, Object>> getSwData(ZjmbSwBgk params) {
 		return zjmbSwBgkMapper.getSwData(params);
 	}
+
+	@Override
+	public Integer updateUploadFlag(Map<String, Object> params) {
+		return zjmbSwBgkMapper.updateUploadFlag(params);
+	}
 }

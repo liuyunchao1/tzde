@@ -1377,12 +1377,13 @@
 
     <!-- 获取死亡数据(共享接口使用) -->
     <select id="getSwData" resultType="map">
-        select t.VC_XM as xm,
-               t.VC_SFZHM as zjhm,
-               (select name from code_info c where c.code = t.VC_HKJDDM) || '' || t.VC_HKXXDZ as hjdz,
-               t.VC_JSLXDH as lxrdh,
-               t.DT_SWRQ as swrq,
-               t.VC_AZJSWJB || '' || t.VC_BZJSWJB || '' || t.VC_CZJSWJB || '' || t.VC_DZJSWJB as zhswyy
+        select t.VC_BGKID as "vcBgkid",
+               t.VC_XM as "xm",
+               t.VC_SFZHM as "zjhm",
+               (select name from code_info c where c.code = t.VC_HKJDDM) || '' || t.VC_HKXXDZ as "hjdz",
+               t.VC_JSLXDH as "lxrdh",
+               t.DT_SWRQ as "swrq",
+               t.VC_AZJSWJB || '' || t.VC_BZJSWJB || '' || t.VC_CZJSWJB || '' || t.VC_DZJSWJB as "zhswyy"
           from ZJMB_SW_BGK t
           where 1=1
           <if test='vcShbz != null and vcShbz != ""'>
@@ -1396,6 +1397,15 @@
           </if>
           and ROWNUM &lt;= 1000 ORDER BY t.dt_swrq
     </select>
+
+    <!-- 更新数据上传状态(共享接口使用) -->
+    <update id="updateUploadFlag">
+        update ZJMB_SW_BGK set VC_UP_SP_FLAG = #{params.vcUpSpFlag}
+        where VC_BGKID in
+        <foreach collection="params.vcBgkidList" item="item" index="index" open="(" close=")" separator=",">
+          #{item}
+        </foreach>
+    </update>
   
   
 </mapper>
