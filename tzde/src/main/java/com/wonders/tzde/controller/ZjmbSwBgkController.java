@@ -26,7 +26,7 @@ public class ZjmbSwBgkController {
     private ZjmbSwBgkService zjmbSwBgkService;
 
     /**
-     * 获取死亡数据(共享接口使用)
+     * 从台州市慢病系统中抽取死亡数据以接口的形式将数据传输给台州市公共数据共享平台
      * @param params
      * @return
      */

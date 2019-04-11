@@ -1382,7 +1382,7 @@
                t.VC_SFZHM as "zjhm",
                (select name from code_info c where c.code = t.VC_HKJDDM) || '' || t.VC_HKXXDZ as "hjdz",
                t.VC_JSLXDH as "lxrdh",
-               t.DT_SWRQ as "swrq",
+               to_char(t.DT_SWRQ,'YYYY/MM/DD') as "swrq",
                t.VC_AZJSWJB || '' || t.VC_BZJSWJB || '' || t.VC_CZJSWJB || '' || t.VC_DZJSWJB as "zhswyy"
           from ZJMB_SW_BGK t
           where 1=1
