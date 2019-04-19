@@ -1377,7 +1377,8 @@
 
     <!-- 获取死亡数据(共享接口使用) -->
     <select id="getSwData" resultType="map">
-        select t.VC_BGKID as "vcBgkid",
+        select t.VC_CJDWDM as "vcCjdwdm",
+               t.VC_BGKID as "vcBgkid",
                t.VC_XM as "xm",
                t.VC_SFZHM as "zjhm",
                (select name from code_info c where c.code = t.VC_HKJDDM) || '' || t.VC_HKXXDZ as "hjdz",
