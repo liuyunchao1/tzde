@@ -1378,7 +1378,6 @@
     <!-- 获取死亡数据(共享接口使用) -->
     <select id="getSwData" resultType="map">
         select t.VC_CJDWDM as "vcCjdwdm",
-               t.VC_BGKID as "vcBgkid",
                t.VC_XM as "xm",
                t.VC_SFZHM as "zjhm",
                (select name from code_info c where c.code = t.VC_HKJDDM) || '' || t.VC_HKXXDZ as "hjdz",
@@ -1390,11 +1389,8 @@
           <if test='vcShbz != null and vcShbz != ""'>
             and t.VC_SHBZ = #{vcShbz}
           </if>
-          <if test='vcUpSpFlag != null and vcUpSpFlag == 0'>
-            and (t.VC_UP_SP_FLAG = 0 or t.VC_UP_SP_FLAG is null)
-          </if>
-          <if test='vcUpSpFlag != null and vcUpSpFlag != 0'>
-            and t.VC_UP_SP_FLAG = #{vcUpSpFlag}
+          <if test='vcSfzhm != null and vcSfzhm != ""'>
+            and t.VC_SFZHM = #{vcSfzhm}
           </if>
           and ROWNUM &lt;= 1000 ORDER BY t.dt_swrq
     </select>

@@ -7,13 +7,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,38 +26,24 @@ public class ZjmbSwBgkController {
 
     /**
      * 从台州市慢病系统中抽取死亡数据以接口的形式将数据传输给台州市公共数据共享平台
-     * @param params
+     * @param zjhm 身份证号
      * @return
      */
-    @PostMapping("/getSwData")
-    public Result getSwData(@RequestBody(required = false) ZjmbSwBgk params) {
+    @GetMapping("/getSwData")
+    public Result getSwData(@RequestParam(value = "zjhm", required = false) String zjhm) {
         try {
-            if (params == null) {
-                params = new ZjmbSwBgk();
-            }
+            ZjmbSwBgk params = new ZjmbSwBgk();
             params.setVcShbz("3");      // 只取区县审核通过状态的
-            // 如果没有指定发送状态的，则默认只取未发送的
-            if (params.getVcUpSpFlag() == null) {
-                params.setVcUpSpFlag(Short.valueOf("0"));
+
+            // 身份证号码过滤条件
+            if (!StringUtils.isEmpty(zjhm)) {
+                params.setVcSfzhm(zjhm);
             }
 
             List<Map<String, Object>> list = zjmbSwBgkService.getSwData(params);
             if (CollectionUtils.isEmpty(list)) {
                 return Result.fail(-1, "没有可获取的数据", null);
             }
-
-            // 更新状态，并去除返回值中不需要的字段
-            List<String> vcBgkidList = new ArrayList<>();
-            list.forEach(p -> {
-                if (p.get("vcBgkid") != null) {
-                    vcBgkidList.add((String) p.get("vcBgkid"));
-                }
-                p.remove("vcBgkid");
-            });
-            Map<String, Object> updateParams = new HashMap<>();
-            updateParams.put("vcUpSpFlag", 1);
-            updateParams.put("vcBgkidList", vcBgkidList);
-            zjmbSwBgkService.updateUploadFlag(updateParams);
 
             return Result.success(list);
         } catch (Exception e) {
