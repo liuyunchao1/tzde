@@ -1,6 +1,7 @@
 package com.wonders.tzde.mapper;
 
 import com.wonders.tzde.model.ZjmbSwBgk;
+import com.wonders.tzde.model.ZjmbSwBgkQuery;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public interface ZjmbSwBgkMapper {
      * @param params
      * @return
      */
-    List<Map<String, Object>> getSwData(ZjmbSwBgk params);
+    List<Map<String, Object>> getSwData(ZjmbSwBgkQuery params);
 
     /**
      * 更新数据上传状态(共享接口使用)

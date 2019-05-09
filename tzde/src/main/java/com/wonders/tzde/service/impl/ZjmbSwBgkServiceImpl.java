@@ -2,7 +2,7 @@ package com.wonders.tzde.service.impl;
 
 
 import com.wonders.tzde.mapper.ZjmbSwBgkMapper;
-import com.wonders.tzde.model.ZjmbSwBgk;
+import com.wonders.tzde.model.ZjmbSwBgkQuery;
 import org.springframework.stereotype.Service;
 
 import com.wonders.tzde.service.ZjmbSwBgkService;
@@ -18,7 +18,7 @@ public class ZjmbSwBgkServiceImpl implements ZjmbSwBgkService {
 	private ZjmbSwBgkMapper zjmbSwBgkMapper;
 	
 	@Override
-	public List<Map<String, Object>> getSwData(ZjmbSwBgk params) {
+	public List<Map<String, Object>> getSwData(ZjmbSwBgkQuery params) {
 		return zjmbSwBgkMapper.getSwData(params);
 	}
 

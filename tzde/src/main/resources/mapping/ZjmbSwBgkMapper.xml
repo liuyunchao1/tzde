@@ -1377,22 +1377,22 @@
 
     <!-- 获取死亡数据(共享接口使用) -->
     <select id="getSwData" resultType="map">
-        select t.VC_CJDWDM as "vcCjdwdm",
-               t.VC_XM as "xm",
+        select t.VC_XM as "xm",
                t.VC_SFZHM as "zjhm",
                (select name from code_info c where c.code = t.VC_HKJDDM) || '' || t.VC_HKXXDZ as "hjdz",
                t.VC_JSLXDH as "lxrdh",
                to_char(t.DT_SWRQ,'YYYY/MM/DD') as "swrq",
-               t.VC_AZJSWJB || '' || t.VC_BZJSWJB || '' || t.VC_CZJSWJB || '' || t.VC_DZJSWJB as "zhswyy"
+               t.VC_AZJSWJB || '' || t.VC_BZJSWJB || '' || t.VC_CZJSWJB || '' || t.VC_DZJSWJB as "zhswyy",
+               (select max(c.NAME) from code_info c where c.CODE = t.VC_CJDWDM) as "vcCjdwdm"
           from ZJMB_SW_BGK t
           where 1=1
           <if test='vcShbz != null and vcShbz != ""'>
             and t.VC_SHBZ = #{vcShbz}
           </if>
-          <if test='vcSfzhm != null and vcSfzhm != ""'>
-            and t.VC_SFZHM = #{vcSfzhm}
+          <if test='zjhm != null and zjhm != ""'>
+            and t.VC_SFZHM = #{zjhm}
           </if>
-          and ROWNUM &lt;= 1000 ORDER BY t.dt_swrq
+          and ROWNUM &lt;= 1000
     </select>
 
     <!-- 更新数据上传状态(共享接口使用) -->
