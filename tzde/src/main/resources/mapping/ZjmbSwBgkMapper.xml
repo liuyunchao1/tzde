@@ -1398,7 +1398,7 @@
             and t.VC_SFZHM = #{zjhm}
           </if>
       order by t.DT_CJSJ desc
-      ) where rownum = 1
+      ) where rownum &lt;= 1
     </select>
 
     <!-- 更新数据上传状态(共享接口使用) -->
