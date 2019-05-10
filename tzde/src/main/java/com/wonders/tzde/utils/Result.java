@@ -2,11 +2,12 @@ package com.wonders.tzde.utils;
 
 /**
  * Controller返回的结果封装
+ * 字段根据客户提供的接口文档中的要示来
  */
 public class Result {
     /**
      * 状态码，
-     * 00”代码成功，即有结果返回，“02-98”代表“失败”，无结果返回
+     * 00代表成功，即有结果返回，其余代表“失败”
      */
     private String result;
 
@@ -21,10 +22,16 @@ public class Result {
      */
     private Integer dataCount;
 
+    private Object data;
+
     /**
      * 具体的数据
      */
     private Object datas;
+
+    private String requestId;
+
+    private String interfaces;
 
     public String getResult() {
         return result;
@@ -50,12 +57,36 @@ public class Result {
         this.dataCount = dataCount;
     }
 
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
     public Object getDatas() {
         return datas;
     }
 
     public void setDatas(Object datas) {
         this.datas = datas;
+    }
+
+    public String getRequestId() {
+        return requestId;
+    }
+
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
+    }
+
+    public String getInterfaces() {
+        return interfaces;
+    }
+
+    public void setInterfaces(String interfaces) {
+        this.interfaces = interfaces;
     }
 
     public Result(String result, String resultmsg, Integer dataCount, Object datas) {

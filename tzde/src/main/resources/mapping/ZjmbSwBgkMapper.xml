@@ -1377,14 +1377,19 @@
 
     <!-- 获取死亡数据(共享接口使用) -->
     <select id="getSwData" resultType="map">
+      select * from (
         select t.VC_XM as "xm",
                t.VC_SFZHM as "zjhm",
-               (select name from code_info c where c.code = t.VC_HKJDDM) || '' || t.VC_HKXXDZ as "hjdz",
+                (select c.name from code_info c where c.code_info_id = (select c1.id from code_info c1 where c1.code = 'C_COMM_SHEDM') and c.code = t.VC_HKQCS)
+                || '' || (select c.name from code_info c where c.code_info_id = (select c1.id from code_info c1 where c1.code = 'C_COMM_SJDM') and c.code = t.VC_HKSDM)
+                || '' || (select c.name from code_info c where c.code_info_id = (select c1.id from code_info c1 where c1.code = 'C_COMM_QXDM') and c.code = t.VC_HKQXDM)
+                || '' || (select c.name from code_info c where c.code_info_id = (select c1.id from code_info c1 where c1.code = 'C_COMM_JDDM') and c.code = t.VC_HKJDDM)
+                || '' || t.VC_HKXXDZ as "hjdz",
                t.VC_JSLXDH as "lxrdh",
                to_char(t.DT_SWRQ,'YYYY/MM/DD') as "swrq",
                t.VC_AZJSWJB || '' || t.VC_BZJSWJB || '' || t.VC_CZJSWJB || '' || t.VC_DZJSWJB as "zhswyy",
-               (select max(c.NAME) from code_info c where c.CODE = t.VC_CJDWDM) as "vcCjdwdm"
-          from ZJMB_SW_BGK t
+                (select c.name from code_info c where c.code_info_id = (select c1.id from code_info c1 where c1.code = 'C_COMM_YYDM') and c.code = t.VC_CJDWDM) as "vcCjdwdm"
+      from ZJMB_SW_BGK t
           where 1=1
           <if test='vcShbz != null and vcShbz != ""'>
             and t.VC_SHBZ = #{vcShbz}
@@ -1392,7 +1397,8 @@
           <if test='zjhm != null and zjhm != ""'>
             and t.VC_SFZHM = #{zjhm}
           </if>
-          and ROWNUM &lt;= 1000
+      order by t.DT_CJSJ desc
+      ) where rownum = 1
     </select>
 
     <!-- 更新数据上传状态(共享接口使用) -->
