@@ -33,8 +33,6 @@ public class ZjmbSwBgkController {
             if (params == null || StringUtils.isEmpty(params.getZjhm())) {
                 return Result.fail("02", "参数为空");
             }
-            params.setVcShbz("3");      // 只取区县审核通过状态的
-
             List<Map<String, Object>> list = zjmbSwBgkService.getSwData(params);
             if (CollectionUtils.isEmpty(list)) {
                 return Result.fail("02", "查询结果为空");
@@ -46,5 +44,25 @@ public class ZjmbSwBgkController {
             return Result.fail("99", "获取数据失败");
         }
 
+    }
+
+    @PostMapping("/getSwDataToHos")
+    public Result getSwDataToHos(ZjmbSwBgkQuery params){
+        try {
+            if (params == null) {
+                return Result.fail("02", "参数为空!");
+            }
+            if(!"123".equals(params.getUserName()) || !"123".equals(params.getPassword())){
+                return Result.fail("02", "用户名或密码不正确!");
+            }
+            List<Map<String, Object>> list = zjmbSwBgkService.getSwDataToHos(params);
+            if (CollectionUtils.isEmpty(list)) {
+                return Result.fail("02", "查询结果为空!");
+            }
+            return Result.success(list.size(), list);
+        }catch(Exception e){
+            logger.error(e.getMessage(), e);
+            return Result.fail("99", "获取数据失败!");
+        }
     }
 }

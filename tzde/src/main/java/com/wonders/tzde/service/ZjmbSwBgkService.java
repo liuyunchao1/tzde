@@ -20,4 +20,11 @@ public interface ZjmbSwBgkService {
 	 * @return
 	 */
 	Integer updateUploadFlag(Map<String, Object> params);
+
+	/**
+	 * 死亡数据下发接口
+	 * @param params
+	 * @return
+	 */
+	public List<Map<String, Object>> getSwDataToHos(ZjmbSwBgkQuery params);
 }

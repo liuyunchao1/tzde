@@ -1390,10 +1390,10 @@
                t.VC_AZJSWJB || '' || t.VC_BZJSWJB || '' || t.VC_CZJSWJB || '' || t.VC_DZJSWJB as "zhswyy",
                 (select c.name from code_info c where c.code_info_id = (select c1.id from code_info c1 where c1.code = 'C_COMM_YYDM') and c.code = t.VC_CJDWDM) as "vcCjdwdm"
       from ZJMB_SW_BGK t
-          where 1=1
-          <if test='vcShbz != null and vcShbz != ""'>
-            and t.VC_SHBZ = #{vcShbz}
-          </if>
+          where 1=1 and t.VC_SHBZ in('1','3')
+         <!-- <if test='vcShbz != null and vcShbz != ""'>
+            and t.VC_SHBZ in (#{vcShbz})
+          </if>-->
           <if test='zjhm != null and zjhm != ""'>
             and t.VC_SFZHM = #{zjhm}
           </if>
@@ -1409,6 +1409,25 @@
           #{item}
         </foreach>
     </update>
-  
+
+  <!-- 医院获取死亡数据(下发接口使用) -->
+  <select id="getSwDataToHos" resultType="map">
+    select * from
+     ZJMB_SW_BGK t
+    where 1=1
+    <if test='xm != null and xm != ""'>
+      and t.VC_XM = #{xm}
+    </if>
+    <if test='swrq != null and swrq != ""'>
+      and t.DT_SWRQ = to_date(#{swrq},'yyyy/mm/dd')
+    </if>
+    <if test='jkys != null and jkys != ""'>
+      and t.VC_JKYS = #{jkys}
+    </if>
+    and rownum &lt;= 100
+    order by t.DT_CJSJ desc
+
+  </select>
+
   
 </mapper>
